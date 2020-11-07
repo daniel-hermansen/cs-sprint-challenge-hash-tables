@@ -4,6 +4,20 @@ def intersection(arrays):
     """
     # Your code here
 
+    hashtable = {} # initialize empty dictionary
+
+    result = [] # intitalize empty list to add intersections
+
+    for i in arrays:
+        for e in i: 
+            if e not in hashtable: 
+                hashtable[e] = 1 # amt of e in hashtable 
+            else: 
+                hashtable[e] += 1 # add intersection to hashtable
+                if hashtable[e] == len(arrays): # if intersection in every array
+                    result.append(e) # add intersection to result 
+    
+
     return result
 
 
